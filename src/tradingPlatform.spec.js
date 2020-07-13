@@ -25,7 +25,7 @@ describe('GIVEN  TradingPlatform class', () => {
     });
   });
 
-  describe('AND a sell order for 50 `TSCO` at 2.50 is added', () => {
+  describe('AND multiple buy/sell orders are added', () => {
     it('SHOULD match the existing buy order no orders should be on the platform', () => {
       const tradingPlatform = new TradingPlatform();
 
@@ -38,7 +38,7 @@ describe('GIVEN  TradingPlatform class', () => {
       const buyOrders = tradingPlatform.getBuyOrders();
 
       expect(sellOrders).to.eql([]);
-      expect(buyOrders).to.eql([]);
+      expect(buyOrders).to.eql([{ amount: 54, name: 'TSCO', price: 2.5 }]);
     });
   });
 
