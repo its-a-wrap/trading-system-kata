@@ -12,7 +12,14 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
+  "plugins": [
+    "chai-friendly"
+  ],
   "rules": {
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2,
+    "no-plusplus": "off"
   }
 }
